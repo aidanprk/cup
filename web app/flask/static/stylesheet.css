@@ -1,0 +1,58 @@
+/*
+div.classname{
+	padding-left: 30%;
+	padding-top: 1pt;
+	padding-right: 30%;
+	padding-bottom: 1pt;
+	background-color: #517ec6;
+	text-align: center;
+}
+h1.classtitle{
+	text-align: center;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-style: bold;
+	font-size: 35pt;
+	font-synthesis: bold;
+	font-stretch: expanded;
+	color:#dcf2eb;
+}
+h2.projecttitle{
+	text-align: center;
+	font-family: "Courier New", Courier, monospace;
+	font-color: white;
+}
+
+
+
+div.userproblem{
+	padding-top: 20pt;
+	align-items: center;
+	padding-left: 30%
+}
+
+textarea.probleminput{
+	align-self: center;
+	content: before;
+	width: 400pt;
+	height: 100pt;
+}
+
+img.cup{
+	height: 30pt;
+	align-self: middle;
+}
+
+
+div.altproblem{
+	padding-top: 20pt;
+	align-items: center;
+	padding-left: 30%
+	padding-right:50%;
+}
+h3{
+	font-family: "Courier New", Courier, monospace;
+	text-align: center;
+}
+input.anwserinput{
+
+}*/
