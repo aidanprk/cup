@@ -5,20 +5,26 @@
 	<title>Login Assisted Cup App</title>
 	<script type="text/javascript" src='script.js'></script>
 </head>
-
 <body>
 	<div class='teacher'>
 		<h3>Login As Teacher</h3>
 		<input id = 'class' placeholder="Class Name"></input>
 		<input id = 'code' placeholder="Enter class code"></input>
-		<button class = 'classcreate' id='classcreate'> Create new Class </button>
+		<form action="http://localhost:5000/teacher">
+    		<input type="submit" value="Enter Class" />
+		</form>
+		<!--input type="button" value="This is button link" onclick="window.location.href='teacher.html'">
+		<button class = 'classcreate' id='classcreate'> Create new Class </button-->
 	</div>
 
 	<div class='student'>
 		<h3>Login as Student</h3>
 		<input id = 'unstudent' placeholder="enter your name"></input>
 		<input id = 'classcode' placeholder="enter class code"></input>
-		<button id='slogin' onclick="">Login</button>
+		<!--button id='slogin' onclick="">Login</button-->
+		<form action="http://localhost:5000/studentpage1">
+    		<input type="submit" value="Enter Class" />
+		</form>
 	</div>
 
 </body>
