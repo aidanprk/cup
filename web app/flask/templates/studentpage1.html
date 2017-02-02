@@ -7,12 +7,11 @@
 		</title>
 		<link rel='stylesheet' type='text/css' href="stylesheet.css" />
 		<script type="text/javascript" src='script.js'></script>
+		<script> type ='text/javascript' src='html/teacher.html'></script>
 
 	</head>
 
 	<body>
-
-		<a href="login.html">To Login</a>
 
 		<div class='classname'>
 			<h1 class='classtitle'>Class Name</h1>
@@ -20,7 +19,8 @@
 		</div>
 
 		<script>
-			var problem = false;
+			var problem = localStorage.getItem("false")
+			localStorage.setItem("false", problem)
 
 			function isProb(){
 				if(problem == false){
