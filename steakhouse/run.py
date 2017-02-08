@@ -4,10 +4,12 @@ from cupClasses import *
 
 app = Flask(__name__)
 
+#start
 @app.route('/')
 def main():
 	return render_template('login.html')
 
+#login
 @app.route('/', methods=['POST'])
 def login():
 	#Teacher Login
@@ -17,8 +19,7 @@ def login():
 		if className == '' or classCode == '':
 				return redirect(url_for('login'))
 		else:
-			myClass = Classroom(className, classCode)
-			return redirect(url_for('teacher', className = myClass.name, classObject = myClass))
+			return redirect(url_for('teacher', className = className, code = classCode))
 
 
 	
@@ -28,18 +29,18 @@ def login():
 		if uname == '':
 			return redirect(url_for('login'))
 		else:
-			me = Student(uname)
 			redirect(url_for['student'],username = uname)
 
 
-
+#student
 @app.route('/student/<username>')
 def student(username):
 	return render_template('studentpage1.html')
 
+
+#teacher
 @app.route('/teacher/<className>')
-def teacher(className, classObject):
-	myClass = classObject
+def teacher(className, code):
 	return render_template('teacher.html')
 
 app.run(debug = True, port = 1200)
