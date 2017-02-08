@@ -1,6 +1,0 @@
-class Class{
-	constuctor(name){
-		
-	}
-}
-

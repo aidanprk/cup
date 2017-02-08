@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login Assisted Cup App</title>
+	<script type="text/javascript" src='script.js'></script>
+</head>
+
+<body>
+	<form action="." method="POST">
+	<div class='teacher'>
+		<h3>Login As Teacher</h3>
+			<input type='text' name='classname' placeholder="Class Name"></input>
+			<input type='text' name='code' placeholder="Enter class code"></input>
+			<input type='submit' name = 'classcreate' value="Create new Class"></input>
+	</div>
+
+	<div class='student'>
+		<h3>Login as Student</h3>
+		<form method="POST", action=".">
+			<input type='text' name = 'unstudent' placeholder="enter your name"></input>
+			<input  type='text' name='entered_classcode' placeholder="enter class code"></input>
+			<input type='submit' name='createuser' value="Join Class"></input>
+	</div>
+	</form>
+</body>
+</html>
