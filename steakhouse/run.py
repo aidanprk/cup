@@ -21,7 +21,6 @@ def login():
 		else:
 			return redirect(url_for('teacher', className = className, code = classCode))
 
-
 	
 	#Student Login	
 	if request.form['submit'] == "Join Class":
@@ -29,13 +28,12 @@ def login():
 		if uname == '':
 			return redirect(url_for('login'))
 		else:
-			redirect(url_for['student'],username = uname)
-
+			return redirect(url_for('student', username = uname))
 
 #student
 @app.route('/student/<username>')
 def student(username):
-	return render_template('studentpage1.html')
+	return render_template('studentpage1.html', name = username)
 
 
 #teacher
@@ -43,7 +41,5 @@ def student(username):
 def teacher(className, code):
 	return render_template('teacher.html')
 
-app.run(debug = True, port = 1200)
+app.run(debug = True, port = 1210)
 
-
-	
