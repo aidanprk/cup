@@ -16,7 +16,7 @@
 
 		<div class='classname'>
 			<h1 class='classtitle'>class title</h1>
-			<h2 class='studentname'>{{'name'}}</h2>
+			<h2 class='studentname'>User: {{name}}</h2>
 		</div>
 
 		<script>
@@ -25,14 +25,14 @@
 			function isProb(){
 				if(problem == false){
 					problem = true;
-					document.getElementById("theCupImage").src = 'up.jpg';
+					document.getElementById("theCupImage").src = "{{ url_for('static', filename = 'up.jpg') }}";
 					document.getElementById('probleminput').disabled = false;
 					document.getElementById('probleminput').placeholder = 'Enter Question or Problem'
 				}
 
 				else{
 					problem = false;
-					document.getElementById("theCupImage").src = 'down.jpg';
+					document.getElementById("theCupImage").src = "{{ url_for('static', filename = 'down.jpg') }}";
 					document.getElementById('probleminput').disabled = true;
 					document.getElementById('probleminput').placeholder = ''
 				}
@@ -42,7 +42,7 @@
 		<div class='userproblem'>
 
 			<button class='cup' onclick="isProb()"> 
-				<img class='cup' id ="theCupImage" src='down.jpg' style="height: 30pt" /> 
+				<img class='cup' id ="theCupImage" src="{{ url_for('static', filename = 'down.jpg') }}" style="height: 30pt" /> 
 			</button>
 			<textarea class = 'probleminput' id='probleminput' type="text" rows='' disabled="true"></textarea>
 
