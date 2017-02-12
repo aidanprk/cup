@@ -3,6 +3,7 @@ from cupClasses import *
 
 
 app = Flask(__name__)
+	
 
 #start
 @app.route('/')
@@ -19,6 +20,7 @@ def login():
 		if className == '' or classCode == '':
 				return redirect(url_for('login'))
 		else:
+			created_class = Classroom(className, classCode) 
 			return redirect(url_for('teacher', className = className, code = classCode))
 
 	
